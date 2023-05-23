@@ -6,7 +6,8 @@ const Home = () => {
   };
   return (
     <div>
-      <button onClick={git}>Karakterler</button>
+      <h1>Home</h1>
+      <button onClick={git}>Karakterler sayfasına git</button>
     </div>
   );
 };
