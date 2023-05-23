@@ -12,20 +12,23 @@ const Character = () => {
         "https://rickandmortyapi.com/api/character"
       );
       setData(response.data.results);
+      console.log(response.data.results);
     };
     fetchData();
   }, []);
 
-  const git = () => {
-    window.location = "/";
-  };
   return (
     <div>
       <Header />
       <div className="cards">
         {data.map((item) => (
-          <div className="card" key={item.id}>
-            <h4>{item.name}</h4>
+          <div
+            className="cardCharacter
+          "
+            key={item.id}
+          >
+            <img src={item.image} />
+            <h3>{item.name}</h3>
             <h5>{item.species}</h5>
             <p>{item.status}</p>
           </div>

@@ -3,13 +3,13 @@ import Header from "./header";
 import axios from "axios";
 import "./component.css";
 
-const Home = () => {
+const Location = () => {
   const [data, setData] = useState([]);
 
   useEffect(() => {
     const fetchData = async () => {
       const response = await axios.get(
-        "https://rickandmortyapi.com/api/episode"
+        "https://rickandmortyapi.com/api/location"
       );
       setData(response.data.results);
     };
@@ -23,8 +23,7 @@ const Home = () => {
         {data.map((item) => (
           <div className="card" key={item.id}>
             <h3>{item.name}</h3>
-            <h5>{item.air_date}</h5>
-            <p>{item.episode}</p>
+            <h5>{item.type}</h5>
           </div>
         ))}
       </div>
@@ -32,4 +31,4 @@ const Home = () => {
   );
 };
 
-export default Home;
+export default Location;

@@ -8,13 +8,16 @@ const Header = () => {
   const gitKarakter = () => {
     window.location = "/character";
   };
+  const gitLokasyon = () => {
+    window.location = "/location";
+  };
   return (
     <div className="header">
       <div className="img"></div>
       <div className="spans">
         <span onClick={gitHome}>Bölümler</span>
         <span onClick={gitKarakter}>Karakterler</span>
-        <span>Mekanlar</span>
+        <span onClick={gitLokasyon}>Mekanlar</span>
       </div>
     </div>
   );
