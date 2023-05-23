@@ -1,0 +1,36 @@
+.header {
+  height: 150px;
+  background-color: var(--blue);
+  display: flex;
+  font-size: 55px;
+  padding: 10px;
+  display: flex;
+  align-items: center;
+  font-family: Georgia, Times, "Times New Roman", serif;
+}
+.img {
+  width: 19%;
+  background-repeat: no-repeat;
+  height: 80%;
+  margin-left: 15px;
+  background-position: center;
+  background-image: url(/src/assets/logo.png);
+  border-radius: 30px;
+  -webkit-border-radius: 30px;
+  -moz-border-radius: 30px;
+  -ms-border-radius: 30px;
+  -o-border-radius: 30px;
+}
+.spans {
+  width: 81%;
+  height: 100%;
+  color: rgb(238, 244, 197);
+  display: flex;
+  align-items: center;
+  padding-left: 400px;
+  justify-content: space-evenly;
+}
+.spans span:hover {
+  color: var(--green);
+  cursor: pointer;
+}
