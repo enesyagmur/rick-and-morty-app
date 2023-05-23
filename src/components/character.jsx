@@ -5,6 +5,7 @@ import "./component.css";
 
 const Character = () => {
   const [data, setData] = useState([]);
+  const [Copydata, setCopydata] = useState([]);
 
   useEffect(() => {
     const fetchData = async () => {
@@ -12,15 +13,20 @@ const Character = () => {
         "https://rickandmortyapi.com/api/character"
       );
       setData(response.data.results);
+      setCopydata(response.data.results);
     };
     fetchData();
   }, []);
 
   const search = (value) => {
-    const result = data.filter((item) =>
-      item.name.toLowerCase().includes(value.toLowerCase())
-    );
-    setData(result);
+    if (value !== "") {
+      const result = data.filter((item) =>
+        item.name.toLowerCase().includes(value.toLowerCase())
+      );
+      setData(result);
+    } else {
+      setData(Copydata);
+    }
   };
 
   return (
