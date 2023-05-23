@@ -3,10 +3,10 @@ import "./header.css";
 
 const Header = () => {
   const gitHome = () => {
-    window.location = "/";
+    window.location = "/home";
   };
   const gitKarakter = () => {
-    window.location = "/character";
+    window.location = "/";
   };
   const gitLokasyon = () => {
     window.location = "/location";
@@ -15,8 +15,8 @@ const Header = () => {
     <div className="header">
       <div className="img"></div>
       <div className="spans">
-        <span onClick={gitHome}>Bölümler</span>
         <span onClick={gitKarakter}>Karakterler</span>
+        <span onClick={gitHome}>Bölümler</span>
         <span onClick={gitLokasyon}>Mekanlar</span>
       </div>
     </div>

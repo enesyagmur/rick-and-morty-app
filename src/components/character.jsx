@@ -12,14 +12,30 @@ const Character = () => {
         "https://rickandmortyapi.com/api/character"
       );
       setData(response.data.results);
-      console.log(response.data.results);
     };
     fetchData();
   }, []);
 
+  const search = (value) => {
+    const result = data.filter((item) =>
+      item.name.toLowerCase().includes(value.toLowerCase())
+    );
+    setData(result);
+  };
+
   return (
     <div>
       <Header />
+      <div className="searchBar">
+        {" "}
+        <input
+          type="text"
+          className="input"
+          placeholder="search a character"
+          onChange={(e) => search(e.target.value)}
+        />
+      </div>
+
       <div className="cards">
         {data.map((item) => (
           <div
